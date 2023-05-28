@@ -3,11 +3,10 @@ package company.model;
 public class User {
     private int id;
     private String name;
-
     private String surName;
-    private GENDER gender;
+    private Gender gender;
 
-    public User(int id, String name, String surName, GENDER gender) {
+    public User(int id, String name, String surName, Gender gender) {
         this.id = id;
         this.name = name;
         this.surName = surName;
@@ -30,11 +29,11 @@ public class User {
         this.surName = surName;
     }
 
-    public GENDER getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(GENDER gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 

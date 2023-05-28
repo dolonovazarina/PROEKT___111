@@ -26,35 +26,25 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void deleteUserById(int id) {
-        int couter = 0;
+        int counter = 0;
         for (int i = 0; i < userDao.getUsers ( ).size ( ); i++) {
             if (userDao.getUsers ( ).get ( i ).getId ( ) == id) {
                 userDao.getUsers ( ).remove ( userDao.getUsers ( ).get ( i ) );
-            }
-            else {
-                couter++;
+            }else {
+                counter++;
             }
         }
-        if (couter == userDao.getUsers ( ).size ( )) {
+        if (counter == userDao.getUsers ( ).size ( )) {
             throw new MyException ( "jok" );
-        }
-        else {
+        }else {
             System.out.println ( "kod bar" );
         }
     }
 
     @Override
-    public void getAllUser() {
+    public void getAllUsers() {
         for (int i = 0; i < userDao.getUsers ( ).size ( ); i++) {
             System.out.println ( userDao.getUsers ( ).get ( i ) );
-
         }
-
     }
-
-    @Override
-    public void dellById(int id) {
-
-    }
-
 }

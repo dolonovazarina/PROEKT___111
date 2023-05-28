@@ -1,6 +1,6 @@
 package company.model;
 
-public enum GENDER {
+public enum Gender {
     MALE,
     FEMALE
 }

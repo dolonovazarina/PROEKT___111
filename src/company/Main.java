@@ -1,15 +1,14 @@
 package company;
 
-import company.model.GENDER;
+import company.model.Gender;
 import company.model.User;
-import company.service.UserService;
 import company.service.impl.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-        User user1 = new User ( 2, "Asan", "tasfdbh", GENDER.MALE );
-        User user2 = new User ( 1, "Asan", "tasfdbh", GENDER.MALE );
-        User user3 = new User ( 3, "Asan", "gffdjggggggg", GENDER.MALE );
+        User user1 = new User ( 2, " Asan " , " Tairov ", Gender.MALE );
+        User user2 = new User ( 1, " Aman ", " Kaimov ", Gender.MALE );
+        User user3 = new User ( 3, " Uson ", " Karimov ", Gender.MALE );
 
         UserServiceImpl userService = new UserServiceImpl ( );
         userService.addUser ( user1 );
@@ -27,7 +26,7 @@ public class Main {
         }catch (MyException e){
             System.out.println (e.getMessage () );
         }
-        userService.getAllUser ();
+        userService.getAllUsers ();
 
 
     }
